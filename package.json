@@ -1,0 +1,12 @@
+{
+    "name": "gist-bm",
+    "description": "Github Gist Backup & Migrate",
+    "repository": "https://github.com/anands/gist-bm.git",
+    "license": "GPL",
+    "version": "1.0.0",
+    "dependencies": {
+        "minimist": "^1.2.0",
+        "request": "^2.79.0",
+        "sync-exec": "^0.6.2"
+    }
+}
