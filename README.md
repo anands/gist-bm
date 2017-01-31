@@ -1,4 +1,4 @@
-## Tool to Backup / Username Migration for Github Gist
+## Backup & Username Migration Tool for Github Gist
 
 Gist migrate helps you to:
 
