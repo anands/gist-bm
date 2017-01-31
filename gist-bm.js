@@ -76,12 +76,7 @@ function cloneGists(url) {
                 gists.forEach(function(gist) {
                     var gistUrl = gist.git_pull_url;
                     console.info("Cloning: " + gist.description + '(' + gist.id + ')');
-                    var cloneCommand = [];
-                    if (config.OUT_DIR) {
-                        cloneCommand.push('cd ' + config.OUT_DIR + ' && ');
-                    }
-                    cloneCommand.push('git clone ' + gist.git_pull_url.replace('https://gist.github.com/', 'git@gist.github.com:'));
-                    exec(cloneCommand.join(' '));
+                    exec('git clone ' + gist.git_pull_url.replace('https://gist.github.com/', 'git@gist.github.com:') + ' ' + (config.OUT_DIR || '.') + '/' + gist.id);
                 });
             } catch (e) {
                 console.error(e);
